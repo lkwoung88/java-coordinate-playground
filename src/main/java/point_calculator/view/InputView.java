@@ -24,7 +24,8 @@ public class InputView {
     }
 
     public boolean isAvailableInput(String input) {
-        return !input.matches("^\\(\\d{1,2},\\d{1,2}\\)-\\(\\d{1,2},\\d{1,2}\\)$");
+        // Allow 2 to 4 coordinate pairs separated by dashes
+        return !input.matches("^\\(\\d{1,2},\\d{1,2}\\)(-\\(\\d{1,2},\\d{1,2}\\)){1,3}$");
     }
 
     public List<Point> parsePoints(String input) {
