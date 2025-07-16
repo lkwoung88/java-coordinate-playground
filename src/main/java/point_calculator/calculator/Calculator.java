@@ -19,4 +19,8 @@ public abstract class Calculator {
     public List<Point> getPoints() {
         return points;
     }
+
+    protected double distance(Point point, Point point1) {
+        return Math.sqrt(Math.pow(point.getX() - point1.getX(), 2) + Math.pow(point.getY() - point1.getY(), 2));
+    }
 }

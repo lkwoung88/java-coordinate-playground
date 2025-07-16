@@ -25,11 +25,6 @@ public class RectangleCalculator extends Calculator {
         System.out.println("사각형의 넓이는 " + calculate() + "입니다.");
     }
 
-
-    private double distance(Point point, Point point1) {
-        return Math.sqrt(Math.pow(point.getX() - point1.getX(), 2) + Math.pow(point.getY() - point1.getY(), 2));
-    }
-
     private boolean isRectangle(List<Point> points) {
         Point a = points.get(0);
         Point b = points.get(1);
