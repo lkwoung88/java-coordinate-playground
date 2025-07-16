@@ -1,8 +1,9 @@
 package point_calculator.main;
 
-import point_calculator.calculator.LineCalculator;
+import point_calculator.calculator.Calculator;
 import point_calculator.domain.Plane;
 import point_calculator.domain.Point;
+import point_calculator.factory.CalculatorFactory;
 import point_calculator.view.InputView;
 import point_calculator.view.ResultView;
 
@@ -22,7 +23,7 @@ public class PointApplication {
         Plane plane = Plane.create();
         List<Point> points = inputView.requestPoints();
         plane.markPoints(points);
-        LineCalculator lineCalculator = new LineCalculator();
-        resultView.printResult(plane, lineCalculator.calculate(points));
+        Calculator calculator = CalculatorFactory.createCalculator(points);
+        resultView.printResult(plane, calculator);
     }
 }

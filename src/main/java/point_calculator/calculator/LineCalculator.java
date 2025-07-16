@@ -4,11 +4,20 @@ import point_calculator.domain.Point;
 
 import java.util.List;
 
-public class LineCalculator implements Calculator {
+public class LineCalculator extends Calculator {
+
+    public LineCalculator(List<Point> points) {
+        super(points);
+    }
 
     @Override
-    public double calculate(List<Point> points) {
-        return calculateDistance(points.get(0), points.get(1));
+    public double calculate() {
+        return calculateDistance(getPoints().get(0), getPoints().get(1));
+    }
+
+    @Override
+    public void print() {
+        System.out.println("직선의 길이는 " + calculate() + "입니다.");
     }
 
     private double calculateDistance(Point x, Point y) {

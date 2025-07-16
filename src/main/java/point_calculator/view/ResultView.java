@@ -1,10 +1,12 @@
 package point_calculator.view;
 
+import point_calculator.calculator.Calculator;
 import point_calculator.domain.Plane;
 
 public class ResultView {
-    public void printResult(Plane plane, double calculate) {
+    public void printResult(Plane plane, Calculator calculate) {
         plane.print();
-        System.out.println("\n두 점 사이 거리는 : " + calculate);
+        System.out.println();
+        calculate.print();
     }
 }

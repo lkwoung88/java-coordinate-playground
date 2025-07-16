@@ -20,10 +20,10 @@ class LineCalculatorTest {
                 Point.create(0, 0),
                 Point.create(1, 1)
         );
-        LineCalculator lineCalculator = new LineCalculator();
+        LineCalculator lineCalculator = new LineCalculator(points);
 
         // when
-        double line = lineCalculator.calculate(points);
+        double line = lineCalculator.calculate();
 
         // then
         assertThat(line).isEqualTo(1.414, offset(0.00099));

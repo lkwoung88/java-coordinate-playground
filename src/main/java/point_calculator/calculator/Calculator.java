@@ -4,7 +4,19 @@ import point_calculator.domain.Point;
 
 import java.util.List;
 
-public interface Calculator {
+public abstract class Calculator {
 
-    double calculate(List<Point> points);
+    private List<Point> points;
+
+    public Calculator(List<Point> points) {
+        this.points = points;
+    }
+
+    public abstract double calculate();
+
+    public abstract void print();
+
+    public List<Point> getPoints() {
+        return points;
+    }
 }
