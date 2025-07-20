@@ -44,7 +44,7 @@ public class OutputView {
 
     private void printCoordinate(Figure figure, int y, int x) {
         if(figure.hasPoint(x, y)) {
-            System.out.print(MARK_OF_POINT);
+            System.out.printf("%2s  ", MARK_OF_POINT);
         } else {
             System.out.print(FOUR_BLANK);
         }
