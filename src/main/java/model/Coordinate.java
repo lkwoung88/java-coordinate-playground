@@ -1,10 +1,10 @@
 package model;
 
 public class Coordinate {
-    public static final String COORDINATE_RANGE_ERROR_MESSAGE = "좌표는 최소 1부터 최대 24까지만 입력할 수 있습니다.";
-
     public static final int UPPER_LINIT = 24;
     public static final int LOWER_LIMIT = 1;
+
+    public static final String COORDINATE_RANGE_ERROR_MESSAGE = "좌표는 최소 "+ LOWER_LIMIT + "부터 최대 " + UPPER_LINIT + "까지만 입력할 수 있습니다.";
 
     private final int x;
     private final int y;
